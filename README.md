@@ -28,10 +28,12 @@ otpsend,validate
 Endpoint: POST /otp/sendotp
 Description: Sends an OTP to the specified mobile number.
 Request Body:
+ ```json
 {
   "mobileNumber": "0774589989"
 }
 Response Body:
+ ```json
 {
   "otp": "123456",
   "message": "OTP sent successfully"
@@ -40,14 +42,18 @@ Response Body:
 ### Validate OTP
 Endpoint: POST /otp/validateotp
 Description: Validates the OTP for the specified mobile number.
-Request Body:{
+Request Body:
+ ```json
+{
   "mobileNumber": "0774589989",
   "otpNumber": "123456"
 }
 Response Body:
+ ```json
 {
   "message": "OTP is valid"
 }
+ ```json
 or
 {
   "message": "OTP is invalid"
